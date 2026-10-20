@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Store | RoeExchange</title>
+  <meta name="description" content="Gadgets, kitchen, bedroom and clothing deals from University of Roehampton students.">
+  <meta name="theme-color" content="#13a574">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="store">
+  <div id="app-header"></div>
+
+  <main>
+    <section class="container page-head">
+      <span class="eyebrow"><i data-icon="bag"></i>Online store</span>
+      <h1>Welcome to the online store section!</h1>
+      <p>
+        Here you will find everything you need for your home and lifestyle in one place. Explore our
+        categories and choose from a wide variety of products designed to make your everyday life more
+        practical and comfortable.
+      </p>
+    </section>
+
+    <div class="toolbar">
+      <div class="container">
+        <div class="toolbar-row">
+          <label class="search">
+            <span class="sr-only">Search products</span>
+            <i data-icon="search"></i>
+            <input type="search" id="q" placeholder="Search products, sellers or colleges" autocomplete="off">
+          </label>
+          <button type="button" class="btn btn-light" id="filter-toggle" aria-expanded="false" aria-controls="filters" style="min-height: 52px;">
+            <i data-icon="sliders"></i><span>Filters</span>
+          </button>
+        </div>
+        <div class="chips" id="cat-chips" role="group" aria-label="Category"></div>
+        <div class="filters" id="filters">
+          <div>
+            <label for="sort">Sort by</label>
+            <select id="sort" class="input">
+              <option value="newest">Newest first</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select>
+          </div>
+          <div>
+            <label for="condition">Condition</label>
+            <select id="condition" class="input">
+              <option value="any">Any condition</option>
+              <option value="brand new">Brand new</option>
+              <option value="semi-used">Semi-used</option>
+              <option value="used">Used</option>
+            </select>
+          </div>
+          <div>
+            <label for="max">Max price <span class="range-value" id="max-value"></span></label>
+            <input type="range" id="max" min="0" max="500" step="1">
+          </div>
+          <div>
+            <label>Availability</label>
+            <label class="check-row"><input type="checkbox" id="show-sold" checked> Show sold items</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="container" style="padding-bottom: 40px;">
+      <div id="cat-banner"></div>
+      <div class="results-bar">
+        <span id="count"></span>
+        <button type="button" class="btn btn-ghost btn-sm" data-reset>Reset filters</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

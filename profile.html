@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Profile | RoeExchange</title>
+  <meta name="theme-color" content="#13a574">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="profile" data-auth="required">
+  <div id="app-header"></div>
+
+  <main class="container">
+    <div class="profile-layout">
+      <aside class="profile-card" id="profile-card"></aside>
+
+      <section>
+        <div class="tabs" role="tablist" aria-label="Your activity">
+          <button type="button" class="tab active" data-tab="listings" role="tab"><i data-icon="tag"></i>My listings <span class="n" id="n-listings">0</span></button>
+          <button type="button" class="tab" data-tab="trades" role="tab"><i data-icon="swap"></i>My trades <span class="n" id="n-trades">0</span></button>
+          <button type="button" class="tab" data-tab="favourites" role="tab"><i data-icon="heart"></i>Favourites <span class="n" id="n-favs">0</span></button>
+        </div>
+        <div class="tab-panel active" id="panel-listings"></div>
+        <div class="tab-panel" id="panel-trades"></div>
+        <div class="tab-panel" id="panel-favourites"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

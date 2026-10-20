@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Join | RoeExchange</title>
+  <meta name="theme-color" content="#13a574">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="join">
+  <div id="app-header"></div>
+
+  <main>
+    <div class="join-wrap" id="join">
+      <p class="hint" id="already" hidden style="margin-bottom: 16px;">
+        You're already signed in as <b></b>. Creating a new account will replace it on this device.
+      </p>
+
+      <div class="stepper">
+        <div class="s active"><i>1</i><span>Welcome</span></div>
+        <div class="bar"></div>
+        <div class="s"><i>2</i><span>Personal details</span></div>
+        <div class="bar"></div>
+        <div class="s"><i>3</i><span>College</span></div>
+      </div>
+
+      <div class="panel">
+        <!-- Step 1: welcome -->
+        <div class="step-panel active">
+          <div class="welcome">
+            <img src="images/students.jpg" alt="A group of Roehampton students">
+            <div>
+              <h1>Is this your first time?</h1>
+              <p>Sign in to continue.</p>
+              <p>In order to enjoy this application you must prove who you are.</p>
+              <ul class="perks">
+                <li><i data-icon="shield"></i>Only verified Roehampton students</li>
+                <li><i data-icon="swap"></i>Buy, sell and trade on campus</li>
+                <li><i data-icon="tag"></i>No fees, ever</li>
+              </ul>
+              <button type="button" class="btn btn-primary btn-lg" data-go="1">Are you ready to start? <i data-icon="arrow"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: personal details -->
+        <div class="step-panel">
+          <h2>Personal details</h2>
+          <p style="color: var(--muted); margin-bottom: 22px;">This helps other students know they're dealing with a real Roehampton student.</p>
+
+          <form id="details-form" novalidate>
+            <div class="avatar-pick">
+              <span class="avatar" id="avatar-box" tabindex="0" role="button" aria-label="Add a profile picture"><i data-icon="camera"></i></span>
+              <div><strong>Profile picture</strong><span>Optional · click to upload</span></div>
+              <input type="file" id="avatar-input" accept="image/*" hidden>
+            </div>
+
+            <div class="row-2">
+              <div class="field" data-validate>
+                <label for="first-name">First name</label>
+                <input class="input" id="first-name" name="firstName" autocomplete="given-name" required>
+                <p class="error">Please enter your first name.</p>
+              </div>
+              <div class="field" data-validate>
+                <label for="last-name">Last name</label>
+                <input class="input" id="last-name" name="lastName" autocomplete="family-name" required>
+                <p class="error">Please enter your last name.</p>
+              </div>
+            </div>
+
+            <div class="field" data-validate>
+              <label for="email">Roehampton Email</label>
+              <input class="input" id="email" name="email" type="email" placeholder="name@roehampton.ac.uk"
+                pattern=".+@roehampton\.ac\.uk" autocomplete="email" required>
+              <p class="error">Use your university email ending in @roehampton.ac.uk</p>
+            </div>
+
+            <div class="row-2">
+              <div class="field" data-validate>
+                <label for="year">Year of study</label>
+                <select class="input" id="year" name="year" required>
+                  <option value="">Choose your year</option>
+                  <option>Foundation year</option>
+                  <option>Year 1</option>
+                  <option>Year 2</option>
+                  <option>Year 3</option>
+                  <option>Postgraduate</option>
+                </select>
+                <p class="error">Choose your year of study.</p>
+              </div>
+              <div class="field" data-validate>
+                <label for="student-id">Student ID</label>
+                <input class="input" id="student-id" name="studentId" placeholder="e.g. A00123456" required>
+                <p class="error">Please enter your student ID.</p>
+              </div>
+            </div>
+
+            <div class="field" data-validate>
+              <label for="course">Course</label>
+              <input class="input" id="course" name="course" placeholder="e.g. BSc Computing" required>
+              <p class="error">Please enter your course.</p>
+            </div>
+          </form>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-light" data-go="0"><i data-icon="back"></i>Back</button>
+            <button type="button" class="btn btn-primary" data-go="2">Continue <i data-icon="arrow"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3: college -->
+        <div class="step-panel">
+          <h2>What college do you belong to?</h2>
+          <p style="color: var(--muted); margin-bottom: 22px;">Pick your college to join its community.</p>
+          <div class="colleges" id="college-list"></div>
+          <p class="hint" id="college-error" hidden style="color: var(--danger);">Please choose your college.</p>
+          <div class="step-actions">
+            <button type="button" class="btn btn-light" data-go="1"><i data-icon="back"></i>Back</button>
+            <button type="button" class="btn btn-primary" id="create"><i data-icon="check"></i>Create Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

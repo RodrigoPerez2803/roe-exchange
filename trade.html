@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Trade | RoeExchange</title>
+  <meta name="theme-color" content="#13a574">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="trade" data-auth="required">
+  <div id="app-header"></div>
+
+  <main class="container" style="padding-top: 28px;">
+    <div class="intro-banner green reveal">
+      <div class="txt">
+        <span class="eyebrow" style="background: rgba(255,255,255,0.18); color: #fff;"><i data-icon="swap"></i>Trade</span>
+        <h1>Welcome to our Trading section!</h1>
+        <p>
+          Here you can connect with other users to give new life to those items you no longer use and
+          receive something new in exchange.
+        </p>
+        <p style="margin-top: 10px;">
+          Whether it's a book, a gadget, or any special item you no longer need, there's always someone
+          interested in what you have. Explore, negotiate and find the perfect exchange!
+        </p>
+        <button type="button" class="btn btn-light" data-propose><i data-icon="plus"></i>Let's begin</button>
+      </div>
+      <img src="images/trade.jpg" alt="Two happy students outdoors">
+    </div>
+
+    <section style="padding-bottom: 56px;">
+      <div class="section-head">
+        <div>
+          <h2>Trade board</h2>
+          <p id="trade-count"></p>
+        </div>
+        <button type="button" class="btn btn-primary" data-propose><i data-icon="plus"></i>Propose a trade</button>
+      </div>
+      <div class="trade-grid" id="board"></div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

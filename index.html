@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RoeExchange | Buy, sell &amp; trade at Roehampton</title>
+  <meta name="description" content="A safe and reliable space where University of Roehampton students can buy, sell or exchange products without leaving the university.">
+  <meta name="theme-color" content="#13a574">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="home">
+  <div id="app-header"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow reveal"><i data-icon="shield"></i>Only for University of Roehampton students</span>
+          <h1 class="reveal">Buy, sell &amp; trade <span>without leaving campus.</span></h1>
+          <p class="lead reveal">
+            Looking for a safe and reliable space where you can buy, sell or exchange products near you
+            without leaving the university?
+          </p>
+          <p class="hero-question reveal"><span id="hello"></span> What would you like to do today?</p>
+          <div class="actions-grid reveal">
+            <a href="sell.html" class="action-card">
+              <div class="ic ic-green"><i data-icon="tag"></i></div>
+              <div class="txt"><strong>Sell something</strong><span>List it in under a minute</span></div>
+            </a>
+            <a href="store.html" class="action-card">
+              <div class="ic ic-blue"><i data-icon="bag"></i></div>
+              <div class="txt"><strong>Buy something</strong><span>Great deals from students</span></div>
+            </a>
+            <a href="trade.html" class="action-card">
+              <div class="ic ic-orange"><i data-icon="swap"></i></div>
+              <div class="txt"><strong>Trade</strong><span>Swap what you no longer use</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <img src="images/campus.jpg" alt="University of Roehampton campus by the lake">
+          <div class="float-card one" id="float-latest"></div>
+          <div class="float-card two">
+            <span class="check"><i data-icon="shield"></i></span>
+            <div><strong>Verified students</strong><small>Roehampton email only</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container">
+      <div class="stats">
+        <div class="stat reveal"><strong id="stat-items">12</strong><span>Products available now</span></div>
+        <div class="stat reveal"><strong id="stat-sellers">16</strong><span>Student sellers</span></div>
+        <div class="stat reveal"><strong>4</strong><span>Colleges, one community</span></div>
+        <div class="stat reveal"><strong>£0</strong><span>Fees, ever</span></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Explore our categories</h2>
+            <p>Everything you need for your home and lifestyle in one place.</p>
+          </div>
+          <a href="store.html" class="link">See all <i data-icon="arrow"></i></a>
+        </div>
+        <div class="cat-tiles">
+          <a href="store.html?cat=gadgets" class="cat-tile reveal"><img src="images/cat-gadgets.jpg" alt=""><strong><i data-icon="headphones"></i>Gadgets</strong></a>
+          <a href="store.html?cat=kitchen" class="cat-tile reveal"><img src="images/cat-kitchen.jpg" alt=""><strong><i data-icon="cup"></i>Kitchen</strong></a>
+          <a href="store.html?cat=bedroom" class="cat-tile reveal"><img src="images/cat-bedroom.jpg" alt=""><strong><i data-icon="bed"></i>Bedroom</strong></a>
+          <a href="store.html?cat=clothing" class="cat-tile reveal"><img src="images/cat-clothing.jpg" alt=""><strong><i data-icon="shirt"></i>Clothing</strong></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>Latest products</h2>
+            <p>Fresh listings from the Roehampton community.</p>
+          </div>
+          <a href="store.html" class="link">Go to the store <i data-icon="arrow"></i></a>
+        </div>
+        <div class="strip" id="latest"></div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" style="background: #fff;">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <h2>How it works</h2>
+            <p>From your room to someone else's in three simple steps.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="num">1</span>
+            <h3>Create your account</h3>
+            <p>Sign in with your Roehampton email, your student ID and your college. It only takes a minute.</p>
+          </div>
+          <div class="step reveal">
+            <span class="num">2</span>
+            <h3>List, browse or trade</h3>
+            <p>List, set a price and sell easily, or find great deals and swaps from other students.</p>
+          </div>
+          <div class="step reveal">
+            <span class="num">3</span>
+            <h3>Meet on campus</h3>
+            <p>Chat with the seller, agree on a meeting point on campus and close the deal safely.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="section">
+      <div class="container trust">
+        <div class="reveal">
+          <span class="eyebrow"><i data-icon="shield"></i>Safe by design</span>
+          <h2 style="font-size: clamp(24px, 3vw, 32px); margin-bottom: 22px;">A marketplace you can trust</h2>
+          <div class="trust-list">
+            <div class="trust-item">
+              <span class="ic ic-green"><i data-icon="shield"></i></span>
+              <div><h3>Verified students only</h3><p>Every account is created with a Roehampton email and student ID.</p></div>
+            </div>
+            <div class="trust-item">
+              <span class="ic ic-blue"><i data-icon="pin"></i></span>
+              <div><h3>Meet on campus</h3><p>Deals happen in places you know: the library, Elm Grove or your own college.</p></div>
+            </div>
+            <div class="trust-item">
+              <span class="ic ic-orange"><i data-icon="tag"></i></span>
+              <div><h3>No fees, ever</h3><p>What you see is what you pay. No commissions and no hidden costs.</p></div>
+            </div>
+            <div class="trust-item">
+              <span class="ic ic-green"><i data-icon="leaf"></i></span>
+              <div><h3>Give items a second life</h3><p>Buying second-hand saves money and keeps good things out of the bin.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="trust-photo reveal">
+          <img src="images/students.jpg" alt="Roehampton students together on campus">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container" style="padding-bottom: 32px;">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Something in good condition but used?</h2>
+          <p>List it on RoeExchange and sell it to someone on campus today.</p>
+        </div>
+        <a href="sell.html" class="btn btn-lg"><i data-icon="plus"></i>Ready to sell?</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

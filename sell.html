@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sell | RoeExchange</title>
+  <meta name="theme-color" content="#13a574">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-page="sell" data-auth="required">
+  <div id="app-header"></div>
+
+  <main class="container" style="padding-top: 28px;">
+    <div class="intro-banner reveal">
+      <div class="txt">
+        <span class="eyebrow" style="background: rgba(255,255,255,0.18); color: #fff;"><i data-icon="tag"></i>Sell</span>
+        <h1>Something in good condition but used? List it on RoeExchange!</h1>
+        <p>List, set a price, and sell easily in the Roehampton University student community.</p>
+      </div>
+      <img src="images/dorm.jpg" alt="Two students in a university bedroom">
+    </div>
+
+    <div class="sell-layout">
+      <div class="panel">
+        <form id="sell-form" novalidate>
+          <h2>Product details</h2>
+          <p style="color: var(--muted); margin-bottom: 22px;">Tell other students about what you're selling.</p>
+
+          <div class="form-section">
+            <h3><span>1</span>Photos</h3>
+            <div class="field">
+              <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Add photos">
+                <i data-icon="camera"></i>
+                <strong>Add a picture of your product here</strong>
+                <span>Drag &amp; drop or click · up to 4 photos</span>
+              </div>
+              <input type="file" id="photos" accept="image/*" multiple hidden>
+              <div class="thumbs" id="thumbs"></div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3><span>2</span>About the product</h3>
+            <div class="field" data-validate>
+              <label for="title">Product Title</label>
+              <input class="input" id="title" name="title" maxlength="60" placeholder="e.g. Desk lamp, Nintendo Switch games…" required>
+              <p class="error">Give your product a title.</p>
+            </div>
+            <div class="field" data-validate>
+              <span class="label">Category</span>
+              <div class="choice-row" id="cat-choices"></div>
+              <p class="error">Choose a category.</p>
+            </div>
+            <div class="field" data-validate>
+              <label for="description">Description of the product</label>
+              <textarea class="input" id="description" name="description" maxlength="300" placeholder="Why are you selling it? How long have you had it?" required></textarea>
+              <p class="hint" id="desc-count">0 / 300</p>
+              <p class="error">Add a short description.</p>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3><span>3</span>Condition &amp; price</h3>
+            <div class="field" data-validate>
+              <span class="label">Product Condition</span>
+              <div class="choice-row">
+                <span class="choice"><input type="radio" name="condition" id="cond-new" value="Brand new" required><label for="cond-new"><i data-icon="sparkles"></i>Brand new</label></span>
+                <span class="choice"><input type="radio" name="condition" id="cond-semi" value="Semi-used"><label for="cond-semi"><i data-icon="check"></i>Semi-used</label></span>
+                <span class="choice"><input type="radio" name="condition" id="cond-used" value="Used"><label for="cond-used"><i data-icon="clock"></i>Used</label></span>
+              </div>
+              <p class="error">Choose the condition.</p>
+            </div>
+            <div class="row-2">
+              <div class="field" data-validate>
+                <label for="price">Best price for this product?</label>
+                <div class="input-prefix"><span>£</span><input class="input" id="price" name="price" type="number" min="0.5" step="0.01" inputmode="decimal" placeholder="0.00" required></div>
+                <p class="error">Set a price (at least £0.50).</p>
+              </div>
+              <div class="field">
+                <span class="label">Can it be negotiated?</span>
+                <label class="switch">
+                  <span><strong>Open to offers</strong><small>Buyers can suggest a price</small></span>
+                  <input type="checkbox" name="negotiable">
+                  <span class="track"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3><span>4</span>Delivery</h3>
+            <div class="field" data-validate>
+              <label for="delivery">Delivery Method</label>
+              <select class="input" id="delivery" name="delivery" required></select>
+              <p class="error">Choose where you'll meet the buyer.</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top: 8px;"><i data-icon="check"></i>Publish listing</button>
+        </form>
+
+        <div class="success" id="sell-done">
+          <div class="seal"><i data-icon="check"></i></div>
+          <h2>Your product is listed!</h2>
+          <p>Other Roehampton students can now see it in the store. We'll let you know when someone wants to make a deal.</p>
+          <div class="btns">
+            <a href="store.html" class="btn btn-primary" data-view><i data-icon="eye"></i>View in store</a>
+            <button type="button" class="btn btn-light" id="sell-again"><i data-icon="plus"></i>Sell another</button>
+            <a href="profile.html" class="btn btn-ghost">My listings</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="preview-wrap">
+        <p class="label"><i data-icon="eye"></i><span>Live preview</span></p>
+        <div id="preview"></div>
+        <div class="tips">
+          <strong><i data-icon="bulb"></i>Tips for a quick sale</strong>
+          <ul>
+            <li>Use a bright photo on a clean background.</li>
+            <li>Be honest about the condition.</li>
+            <li>Pick a meeting point you pass every day.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
